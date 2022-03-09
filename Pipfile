@@ -6,8 +6,27 @@ name = "pypi"
 [packages]
 flask = "*"
 flask-restx = "*"
+flask-cors = "*"
+sqlalchemy = "*"
+pymysql = "*"
+pydantic = "*"
 
 [dev-packages]
+flak8 = "*"
+flak8-print = "*"
+flak8-isort = "*"
+flak8-quotes = "*"
+flak8-annotations = "*"
+flak8-use-fstring = "*"
+black = "*"
+isort = "*"
+pre-commit = "*"
+alembic = "*"
 
 [requires]
 python_version = "3.9"
+
+[script]
+lint = "flak8 --show-source src migration/versions"
+format = "black  src migration/versions"
+isort = "isort  --profile=black src migration/versions"
