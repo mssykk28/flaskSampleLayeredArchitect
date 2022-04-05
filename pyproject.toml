@@ -1,0 +1,19 @@
+[tool.black]
+line-length = 119
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.pytest_cache
+  | \.python_package
+  | \.venv
+  | db_data
+)/
+| migration/env.py
+'''
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 119
+multi_line_output = 3
+skip = ".venv,.git,__pycache__,.pytest_cache,.python_package,db_data,migration/env.py"
