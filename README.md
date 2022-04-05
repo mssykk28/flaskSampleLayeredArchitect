@@ -1,5 +1,4 @@
-# flaskProject_1
-レイヤードアーキテクチャ
+# flaskSampleLayeredArchitect
 
 ## 参照条件
 ```
