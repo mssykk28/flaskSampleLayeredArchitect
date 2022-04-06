@@ -1,5 +1,10 @@
 # flaskSampleLayeredArchitect
 
+## pre-commitのインストール
+```
+pipenv run pre-commit install
+```
+
 ## 参照条件
 ```
     参照OK;
