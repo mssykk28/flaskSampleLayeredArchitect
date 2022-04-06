@@ -1,7 +1,7 @@
 from typing import List, NoReturn
 
 from src.infrastructure.db.entity.example import Example
-from src.utils.dict import to_dict
+from src.utils.dict import entity_to_dict
 
 
 def find_all(db_session) -> List[Example]:
@@ -25,7 +25,7 @@ def find_by_id(db_session, example_id) -> Example:
 
 
 def update(db_session, example_id, example) -> NoReturn:
-    db_session.query(Example).filter(Example.id == example_id).update(to_dict(example))
+    db_session.query(Example).filter(Example.id == example_id).update(entity_to_dict(example))
     db_session.commit()
 
 
